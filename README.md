@@ -8,8 +8,14 @@
 ## Create a new Angular App
 *together*
 
-1. bower install angular
-2. Use `ng-cloak` to control the "FOUT"
+1. Pull down this repository
+2. `npm install`
+3. `bower install`
+4. `gulp`
+5. Check it out
+6. `bower install angular`
+
+*Use `ng-cloak` to control the "FOUT"*
 
 ## Declarative
 *together*
