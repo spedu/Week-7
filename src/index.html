@@ -7,12 +7,33 @@
   </head>
   <body ng-app="fizzbuzzer" ng-cloak>
     <h1>Hello Fizzbuzzer</h1>
-    <div class="well row" ng-init="buzzer = 0">
+    <div id="div1" class="well row" ng-init="buzzer = 0" ng-controller="MyController">
       <button class="btn" ng-click="buzzer = buzzer + 1">+</button>
       <button class="btn" ng-click="buzzer = buzzer - 1">-</button>
       {{ buzzer }}
-      <span ng-if="buzzer % 3 === 0">Fizz</span>
-      <span ng-if="buzzer % 5 === 0">Buzz</span>
+      <span ng-show="buzzer % 3 === 0 && buzzer !== 0">Fizz</span>
+      <span ng-hide="buzzer % 5 !== 0 || buzzer === 0">Buzz</span>
     </div>
+    <span>{{ buzzer }}</span>
+    <ul class="well list-unstyled" ng-init="letters = ['a', 'b', 'c', 'd', 'e']">
+      <li ng-repeat="letter in letters">
+        {{ letter }}
+      </li>
+    </ul>
+    <table class="table" ng-init="names = [{fname: 'JaZahn', lname: 'Clevenger'},{fname: 'Eric', lname: 'Parker'},{fname: 'Claude', lname: 'Daoust'}]">
+      <caption>Names of teachers</caption>
+      <tr>
+        <th>Index</th>
+        <th>First Name</th>
+        <th>Last Name</th>
+        <th>Actions</th>
+      </tr>
+      <tr ng-repeat="name in names">
+        <td>{{ $index }}</td>
+        <td>{{ name.fname }}</td>
+        <td>{{ name.lname }}</td>
+        <td><button ng-click="names.slice($index)">Delete</button></td>
+      </tr>
+    </table>
   </body>
 </html>
