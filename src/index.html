@@ -15,11 +15,13 @@
       <span ng-hide="buzzer % 5 !== 0 || buzzer === 0">Buzz</span>
     </div>
     <span>{{ buzzer }}</span>
+
     <ul class="well list-unstyled" ng-init="letters = ['a', 'b', 'c', 'd', 'e']">
       <li ng-repeat="letter in letters">
         {{ letter }}
       </li>
     </ul>
+
     <table class="table" ng-init="names = [{fname: 'JaZahn', lname: 'Clevenger'},{fname: 'Eric', lname: 'Parker'},{fname: 'Claude', lname: 'Daoust'}]">
       <caption>Names of teachers</caption>
       <tr>
@@ -28,8 +30,8 @@
         <th>Last Name</th>
         <th>Actions</th>
       </tr>
-      <tr ng-repeat="name in names">
-        <td>{{ $index }}</td>
+      <tr ng-repeat="(index, name) in names">
+        <td>{{ index }}</td>
         <td>{{ name.fname }}</td>
         <td>{{ name.lname }}</td>
         <td><button ng-click="names.slice($index)">Delete</button></td>
