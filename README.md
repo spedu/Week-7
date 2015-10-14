@@ -87,6 +87,7 @@
 4. Add an `ng-controller` to `div1` with a name of "MyController"
 5. Check to see where `buzzer` is updating
 ```
+// kind of sort of works similar to this:
 // $rootScope
 var buzzer = 0;
 function MyController(){
