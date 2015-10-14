@@ -7,14 +7,15 @@
 2. `npm install`
 3. `bower install`
 4. `gulp`
-5. Check it out
-6. `bower install angular`
+5. `bower install angular`
+6. Make sure it's all working
 
 ## Declarative
 *together*
 
 1. `ng-app` to initialize the angular application
 2. `ng-init` to set a variable named "buzzer" to an initial value
+  * `buzzer = 1`
 3. Use an `{{ expression }}` to output the value to the screen
 4. `ng-click` to update the value, increment the value
   * `ng-click="buzzer = buzzer + 1"`
@@ -34,6 +35,7 @@
 4. `ng-class` to hide that same block of text if the value of buzzer is greater than 20
   * Use bootstrap's `hide` class
   * Use `ng-class` as an object literal that has the classname as a key and expression as a value: [ngClass](https://docs.angularjs.org/api/ng/directive/ngClass)
+  * `ng-class="{cssclassname:true === true}"`
 
 ## `ng-repeat`
 *together*
@@ -42,9 +44,10 @@
   * something simple, like `letters = ['a', 'b', 'c']`
 2. Create an `<ul>` with a bootstrap class of `list-unstyled`
 3. Create a `<li>`
-4. Add `ng-repeat` to it
+4. Add `ng-repeat` to the `<li>`
   * `ng-repeat="letter in letters"`
   * similar to JavaScript's "for-in" `for(item in arr){...}` format
+  * 
 
 ## ng-repetition
 *on your own*
@@ -62,6 +65,9 @@
 
 1. Create a new column for "Index"
 2. Print out `$index` in an expression in that column for each element of the array
+  * but `$index` is ugly and the context or scope may not be clear
+  * use [this format](https://docs.angularjs.org/api/ng/directive/ngRepeat#iterating-over-object-properties) instead
+  * `(index, name) in names`
 3. Create a new column for "Actions"
 4. Put a button in that column `<button class='btn'>Do something</button>`
 5. Add an `ng-click` to the button that will do `names.slice($index)`
