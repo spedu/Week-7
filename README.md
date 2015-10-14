@@ -1,10 +1,5 @@
 # Week 7: Angular Intro
 
-## Fix the gulp errors
-*one your own*
-
-1. ...
-
 ## Create a new Angular App
 *together*
 
@@ -15,17 +10,17 @@
 5. Check it out
 6. `bower install angular`
 
-*Use `ng-cloak` to control the "FOUT"*
-
 ## Declarative
 *together*
 
 1. `ng-app` to initialize the angular application
-2. Use an `{{ expression }}` to output the value to the screen
-3. `ng-init` to set the a value to the initial
+2. `ng-init` to set the a value to the initial
+3. Use an `{{ expression }}` to output the value to the screen
 4. `ng-click` to update the value, increment the value
 5. `ng-show` to print "Fizz" when `buzzer` is a multiple of 3
   * and don't show it on 0
+
+*Use `ng-cloak` to control the "FOUT"*
 
 ## Add more to it
 *on your own*
