@@ -14,13 +14,14 @@
 *together*
 
 1. `ng-app` to initialize the angular application
-2. `ng-init` to set the a value to the initial
+2. `ng-init` to set a variable named "buzzer" to an initial value
 3. Use an `{{ expression }}` to output the value to the screen
 4. `ng-click` to update the value, increment the value
+  * `ng-click="buzzer = buzzer + 1"`
 5. `ng-show` to print "Fizz" when `buzzer` is a multiple of 3
-  * and don't show it on 0
-
-*Use `ng-cloak` to control the "FOUT"*
+  * *and don't show it on 0*
+6. Refresh it a few times
+  * Use `ng-cloak` to control the "FOUT"
 
 ## Add more to it
 *on your own*
