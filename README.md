@@ -9,6 +9,8 @@
 4. `gulp`
 5. `bower install angular`
 6. Make sure it's all working
+  * karma
+  * gulp
 
 ## Declarative
 *together*
