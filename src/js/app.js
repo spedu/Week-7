@@ -1,3 +1,4 @@
+/*
 $(document).ready(function(){
   var fizzbuzz = 0;
   $('#plus-btn').click(function(){
@@ -6,3 +7,6 @@ $(document).ready(function(){
   });
   $('#fizzbuzz').html(fizzbuzz);
 });
+*/
+
+angular.module('fizzbuzzer', []).controller('MyController', function(){});

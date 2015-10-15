@@ -5,12 +5,48 @@
     <script src="vendors.js"></script>
     <script src="app.js"></script>
   </head>
-  <body>
+  <body ng-app='fizzbuzzer' ng-cloak>
     <h1>Hello Fizzbuzzer</h1>
-    <div id="div1" class="well row">
-      <button id="plus-btn" class="btn">+</button>
-      <span id="fizzbuzz"></span>
+    <div id="div1" class="well row" ng-init="buzzer = 0" ng-controller="MyController">
+      <button id="plus-btn" class="btn" ng-click="buzzer = buzzer + 1">+</button>
+      <button id="minus-btn" class="btn" ng-click="buzzer = buzzer - 1">-</button>
+      {{ buzzer }}
+      <span ng-show="buzzer % 3 === 0 && buzzer !== 0">Fizz</span>
+      <span ng-hide="!(buzzer % 5 === 0 && buzzer !== 0)">Buzz</span>
+      <span ng-if="buzzer > 10" ng-class="{hide:buzzer > 20}"> Greater than 10! Less than 21!</span>
     </div>
 
+    <div id="div2">
+      {{buzzer}}
+    </div>  
+
+    <div ng-init="letters = ['a', 'b', 'c']">
+      <ul class="list-unstyled">
+        <li ng-repeat="letter in letters">{{letter}}</li>
+      </ul>
+    </div>
+
+    <div ng-init="names = [{fname: 'scott', lname: 'pullen'}, {fname: 'test1', lname: 'testington1'}, {fname: 'test2', lname: 'testington2'}]">
+      <table class="table">
+        <caption>Names</caption>
+        <thead>
+          <tr>
+            <th></th>
+            <th>Firstname</th>
+            <th>Lastname</th>
+            <th>Actions</th>
+          </tr>  
+        </thead> 
+        <tbody> 
+          <tr ng-repeat="(index, name) in names" ng-class-even="'info'" ng-class-odd="'warning'">
+            <td>{{index}}</td>
+            <td>{{name.fname}}</td>
+            <td>{{name.lname}}</td>
+            <td><button class='btn' ng-click="alert('something')">Do something</button></td>
+          </tr> 
+        </tbody> 
+      </table>  
+    </div>  
+    
   </body>
 </html>
