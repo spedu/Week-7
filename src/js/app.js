@@ -2,4 +2,4 @@
 // or
 var app = angular.module('fizzbuzzer', []);
 
-app.controller('MyController', function(){}));
+app.controller('MyController', function(){});
